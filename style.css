@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #050505;
+    color: aquamarine;
+    
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.card{
+    width: 600px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 5px;
+    position: relative;
+   
+}
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s ease-in-out;
+}
+.card::after{
+    content: "Minie's";
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgb(243, 249, 246);
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.card:hover img{
+    filter: drop-shadow(1);
+    filter:
+    grayscale(1)
+    brightness(0.4);
+   
+}
+.card:hover::after{
+    opacity: 1;
+    inset: 20px;
+}
+.card:hover .content h2{
+    scale: 1;
+    opacity: 1;
+}
+.card:hover .content p{
+    opacity: 5;
+    transform: translateY(1);
+}
